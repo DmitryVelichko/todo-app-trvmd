@@ -1,11 +1,15 @@
 import Header from './components/Header';
 import Tasks from './components/Tasks';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AddTask from './components/AddTask';
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    
+  })
 
   // Add Task
   const addTask = (task) => {
