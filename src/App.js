@@ -62,7 +62,7 @@ function App() {
   // Toggle Reminder
   const toggleReminder = async (id) => {
     const taskToToggle = await fetchTask(id);
-   
+    const updTask = {...taskToToggle, reminder: !taskToToggle.reminder}
 
     setTasks(
       tasks.map((task) =>
