@@ -1,24 +1,24 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const AddTask = ({ onAdd }) => {
-  const [text, setText] = useState('');
-  const [day, setDay] = useState('');
-  const [reminder, setReminder] = useState(false);
+  const [text, setText] = useState('')
+  const [day, setDay] = useState('')
+  const [reminder, setReminder] = useState(false)
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     if (!text) {
-      alert('Please add a task');
-      return;
+      alert('Please add a task')
+      return
     }
 
-    onAdd({ text, day, reminder });
+    onAdd({ text, day, reminder })
 
-    setText('');
-    setDay('');
-    setReminder(false);
-  };
+    setText('')
+    setDay('')
+    setReminder(false)
+  }
 
   return (
     <form className='add-form' onSubmit={onSubmit}>
@@ -49,9 +49,10 @@ const AddTask = ({ onAdd }) => {
           onChange={(e) => setReminder(e.currentTarget.checked)}
         />
       </div>
+
       <input type='submit' value='Save Task' className='btn btn-block' />
     </form>
-  );
-};
+  )
+}
 
-export default AddTask;
+export default AddTask
